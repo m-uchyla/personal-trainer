@@ -4,6 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== BASICS ===== */
+
 :root {
   font-family: 'Roboto', sans-serif;
 }
@@ -35,6 +37,8 @@ section{
   user-select: none; /* Standard syntax */
 }
 
+/* ===== NAVBAR AND BURGER ===== */
+
 .navbar-absolute{
   position: fixed;
   transition: 0.5s;
@@ -50,8 +54,7 @@ section{
   0px 0.6px 3.6px -6px rgba(0, 0, 0, 0.053),
   0px 1.4px 8.6px -6px rgba(0, 0, 0, 0.077),
   0px 2.6px 16.2px -6px rgba(0, 0, 0, 0.095),
-  0px 4.7px 28.8px -6px rgba(0, 0, 0, 0.113)
-;
+  0px 4.7px 28.8px -6px rgba(0, 0, 0, 0.113);
 }
 .sidebar {
   -webkit-animation: slide-top 0.7s ease-in-out both;
@@ -218,4 +221,10 @@ section{
 .menu_burger.open .menu_burger-btn::after{
   transform: rotate(-45deg) translate(35px, 35px);
   background-color: #def9fa;
+}
+
+/*====== BUTTON ANIMATION ======*/
+
+.button-hover{
+
 }

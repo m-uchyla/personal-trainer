@@ -20,3 +20,18 @@ export const navLinks = [
         href: ""
     }
 ]
+
+export const privacy = [
+    {
+        id: "politykaPrywatności",
+        title: "Polityka Prywatności"
+    },
+    {
+        id: "cookies",
+        title: "Cookies"
+    },
+    {
+        id: "regulamin",
+        title: "Regulamin"
+    },
+]
