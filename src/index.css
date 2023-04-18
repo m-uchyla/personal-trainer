@@ -23,3 +23,8 @@
   transition: .2s;
   transform: scale(0.9);
 }
+
+section{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

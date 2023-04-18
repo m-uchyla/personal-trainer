@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#ffee32", //yellow
-        secondary: "#e0e0e0", //"white"
-        dark: "#333533", //"black"
+        primary: "#ebc026", //yellow
+        secondary: "#ededed", //white
+        dark: "#232423", //gray
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

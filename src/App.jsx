@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage'
 function App() {
 
   return (
-      <section className='w-full bg-dark relative overflow-hidden'>
+      <section className='w-full bg-dark relative overflow-hidden m-0'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <BrowserRouter>
