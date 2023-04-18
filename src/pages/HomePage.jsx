@@ -1,10 +1,12 @@
 import React from 'react'
-import { Button } from '../components'
+import { Button, Hero } from '../components'
 
 const HomePage = () => {
   return (
     <>
-        <div className='h-[900px]'>HomePage</div>
+        <div>HomePage</div>
+        <Hero />
+
     </>
   )
 }
