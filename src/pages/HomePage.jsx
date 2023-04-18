@@ -1,9 +1,10 @@
 import React from 'react'
+import { Button } from '../components'
 
 const HomePage = () => {
   return (
     <>
-        <div>HomePage</div>
+        <div className='h-[900px]'>HomePage</div>
     </>
   )
 }
