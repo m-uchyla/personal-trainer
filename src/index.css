@@ -16,15 +16,6 @@
   align-items: center;
 }
 
-.button-animation:hover{
-  transition: .2s;
-  transform: scale(1.1);
-}
-
-.button-animation:active{
-  transition: .2s;
-  transform: scale(0.9);
-}
 
 section{
   margin-top: 100px;
@@ -225,6 +216,45 @@ section{
 
 /*====== BUTTON ANIMATION ======*/
 
-.button-hover{
+.button-hover1::before{
+  transition: .3s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #232423;
+}
+.button-hover1:hover::before{
+  transition: .3s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 1;
+  color:#ebc026;
+}
+.button-z-index{
+  z-index: 10;
+}
 
+.button-hover2::before{
+  transition: .3s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ebc026;
+  color: #def9fa;
+}
+.button-hover2:hover::before{
+  transition: .3s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  color: #def9fa;
 }
