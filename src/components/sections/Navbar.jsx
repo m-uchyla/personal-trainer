@@ -8,6 +8,7 @@ const Navbar = () => {
   const [openCloseNav, setOpenCloseNav] = useState(false);
   const [initNav, setInitNav] = useState(true);
   const [navbar, setNavbar] = useState(false);
+  const [navActive, setNavActive] = useState(null);
 
   const changeBackground = () => {
     if(window.scrollY >= 30) {
@@ -18,6 +19,28 @@ const Navbar = () => {
       
   }
 
+  const sections = document.querySelectorAll("section");
+  const navLi = document.querySelectorAll("[id='navLink']");
+  window.onscroll = () => {
+    var current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 150) {
+        current = section.getAttribute("id"); 
+      }
+    });
+
+    navLi.forEach((li,index) => {
+      if (li.classList.contains(current)) {
+        setNavActive(current);
+      }
+      if(current === "hero")setNavActive(null);
+    });
+  };
+
+
+
   window.addEventListener('scroll', changeBackground);
 
   if(openCloseNav){
@@ -27,7 +50,7 @@ const Navbar = () => {
   }
 
   return (
-    <section id="navbar" className={`my-2 py-3 ${navbar ? "navbar-fixed active" : "navbar-absolute"} top-[-8px] left-0 w-full`}>
+    <nav className={`my-2 py-3 ${navbar ? "navbar-fixed active" : "navbar-absolute"} top-[-8px] left-0 w-full`}>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <div className='flex justify-between items-center'>
@@ -36,7 +59,10 @@ const Navbar = () => {
             </a>
             <ul className='list-none sm:flex hidden items-center justify-between'>
               {navLinks.map((link, index) => (
-                <li key={link.id} className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} ${!navbar ? "text-secondary" : "text-secondary"} hover:text-primary cursor-pointer`}>{link.title}</li>
+                <a key={link.id} href={link.href}>
+                  <li id="navLink" className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} text-secondary ${(navActive == link.href.slice(1)) ? "text-red-500" : ""} ${link.href.slice(1)} hover:text-primary cursor-pointer`}>{link.title}</li>
+                  {(navActive == link.href.slice(1)) ? <div className="bg-primary w-[90%] h-[2px]" /> : ""}
+                </a>
               ))}
             </ul>
             <div className={`sm:hidden flex flex-1 justify-end items-center z-50`}>
@@ -63,7 +89,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </section>
+    </nav>
   )
 }
 

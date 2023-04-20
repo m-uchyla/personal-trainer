@@ -4,22 +4,22 @@ export const navLinks = [
     {
         id: "about",
         title: "O mnie",
-        href: ""
+        href: "#about"
     },
     {
         id: "changes",
         title: "Przemiany Klientów",
-        href: ""
+        href: "#transforms"
     },
     {
         id: "offer",
         title: "Oferta",
-        href: ""
+        href: "#pricing"
     },
     {
         id: "contact",
         title: "Kontakt",
-        href: ""
+        href: "#contact"
     }
 ]
 export const transforms = [

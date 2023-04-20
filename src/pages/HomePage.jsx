@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Footer, Hero, Navbar, Pricing } from '../components'
+import { Footer, Hero, Navbar, Pricing, Contact } from '../components'
 import About from '../components/sections/About'
 import Transforms from '../components/sections/Transforms'
 
@@ -11,6 +11,7 @@ const HomePage = () => {
         <About />
         <Transforms />
         <Pricing />
+        <Contact />
         <Footer />
     </>
   )

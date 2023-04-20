@@ -6,8 +6,8 @@ import { Favicon, logo } from '../../assets';
 
 const Footer = () => {
   return (
-    <div className='mt-[200px]'>
-      <section id="footer" className='absolute bottom-[-100px] left-0 w-full bg-darker'>
+    <footer className='mt-[200px]'>
+      <div id="footer" className='absolute bottom-0 left-0 w-full bg-darker'>
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
               <div className='flex justify-between my-3'>
@@ -22,8 +22,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-      </section>
-    </div>
+      </div>
+    </footer>
   )
 }
 
