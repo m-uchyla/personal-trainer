@@ -61,7 +61,7 @@ const Navbar = () => {
               {navLinks.map((link, index) => (
                 <a key={link.id} href={link.href}>
                   <li id="navLink" className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} text-secondary ${(navActive == link.href.slice(1)) ? "text-red-500" : ""} ${link.href.slice(1)} hover:text-primary cursor-pointer`}>{link.title}</li>
-                  {(navActive == link.href.slice(1)) ? <div className={`bg-primary h-[2px] ${index === navLinks.length - 1 ? "mr-0" : "mr-3"}`} /> : ""}
+                  {(navActive == link.href.slice(1)) ? <div className={`bg-primary -mb-[2px] h-[2px] ${index === navLinks.length - 1 ? "mr-0" : "mr-3"}`} /> : ""}
                 </a>
               ))}
             </ul>
@@ -72,15 +72,15 @@ const Navbar = () => {
                   />
                 </div>
                 <div className={`-left-[100px] w-[200%] h-[200vh] absolute ${openCloseNav ? "bg-in" : "bg-out hidden"}`}></div>
-                <div className={`p-6 bg-primary fixed top-0 right-0 w-[70%] h-[100%] ${(initNav) ? "hidden" : "flex flex-col"} ${openCloseNav ? "sidebar" : "sidebar-out"}`}>
+                <div className={`p-6 bg-dark fixed top-0 right-0 w-[70%] h-[100%] ${(initNav) ? "hidden" : "flex flex-col"} ${openCloseNav ? "sidebar" : "sidebar-out"}`}>
                   
                     <ul className='list-none flex-col justify-end items-center flex-1 mt-7'>
                         {navLinks.map((link, index)=>(
                         <div key={link.id}>
                           <li key={link.id} className={`font-poppins text-[24px] text-white font-normal cursor-pointer py-7`} onClick={()=>{handleClickScroll(link.id);setOpenCloseNav((prev) => !prev)}}>
-                              <a href={link.href}>{link.title}</a>
+                              <a href={link.href} onClick={() => {setOpenCloseNav(false)}} >{link.title}</a>
                           </li>
-                          {((index+1) == navLinks.length) ? "" : <div className='w-full h-[1px] bg-white'/>}
+                          {((index+1) == navLinks.length) ? "" : <div className='w-full h-[2px] bg-primary'/>}
                         </div>
                         ))}
                     </ul>
