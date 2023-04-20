@@ -10,7 +10,7 @@ const Contact = () => {
           <div className='flex md:flex-row mx-auto flex-col md:w-[70%] md:gap-12'>
             <div className='flex-1 my-5 flex flex-col justify-evenly'>
               <h2 className='text-center font-bold sm:text-[40px] text-[32px] text-secondary'>Umówmy się na trening</h2>
-              <div className="bg-primary sm:w-[600px] w-[100%] h-[1px] mb-16 mx-auto" />
+              <div className="bg-primary sm:w-[600px] w-[100%] h-[2px] mb-16 mx-auto" />
               <div className='flex flex-col  '>
                 <div className='flex flex-col'>
                   <Input formId={formId} type={"text"} forName={"subject"} labelName={"Temat wiadomości"} placeholder={"Podaj temat w sprawie którego kontaktujesz się z nami"} isRequired={true}/>

@@ -26,7 +26,7 @@ const Navbar = () => {
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (scrollY >= sectionTop - 150) {
+      if (scrollY >= sectionTop - 250) {
         current = section.getAttribute("id"); 
       }
     });
@@ -61,7 +61,7 @@ const Navbar = () => {
               {navLinks.map((link, index) => (
                 <a key={link.id} href={link.href}>
                   <li id="navLink" className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} text-secondary ${(navActive == link.href.slice(1)) ? "text-red-500" : ""} ${link.href.slice(1)} hover:text-primary cursor-pointer`}>{link.title}</li>
-                  {(navActive == link.href.slice(1)) ? <div className="bg-primary w-[90%] h-[2px]" /> : ""}
+                  {(navActive == link.href.slice(1)) ? <div className={`bg-primary h-[2px] ${index === navLinks.length - 1 ? "mr-0" : "mr-3"}`} /> : ""}
                 </a>
               ))}
             </ul>

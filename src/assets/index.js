@@ -11,6 +11,7 @@ import stachBefore from "./img/stachBefore.png"
 import stachAfter from "./img/stachAfter.png"
 import arrow from "./img/arrow.png"
 import mostChosen from "./img/mostChosen.png"
+import WM from "./img/WMlogo_lettersOnly.png"
 
 export{
     Favicon,
@@ -25,5 +26,6 @@ export{
     stachBefore,
     stachAfter,
     arrow,
-    mostChosen
+    mostChosen,
+    WM
 }

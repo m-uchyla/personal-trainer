@@ -8,7 +8,7 @@ const About = () => {
         <img src={Weight} className='w-[550px]'/>
         <div>
           <h2 className='text-[48px] font-semibold text-white'>Jestem Mateold!</h2>
-          <div className='bg-primary w-[500px] h-[1px]'/>
+          <div className='bg-primary w-[500px] h-[2px]'/>
           <p className='max-w-[585px] text-[20px] text-white mt-2'>
             Swoją przygodę ze sportami sylwetkowymi zacząłem w latach 80, co przekłada się nie tylko na wielkie bicepsy, ale też ogromne doświadczenie. Jeśli jesteś systematyczny i dążysz do wyznaczonych celów, osiągniemy je wspólnie!
           </p>

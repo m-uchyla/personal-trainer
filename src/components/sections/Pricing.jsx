@@ -8,7 +8,7 @@ const Pricing = () => {
   return (
     <section id="pricing">
       <h2 className='text-secondary text-[48px] text-center font-bold'>Oferty</h2>
-      <div className="bg-primary sm:w-[450px] w-[100%] h-[1px] mb-16 mx-auto" />
+      <div className="bg-primary sm:w-[450px] w-[100%] h-[2px] mb-16 mx-auto" />
       <div className='flex justify-between xl:gap-20 gap-10 flex-col md:flex-row'>
         {pricing.map((offer,index)=>( 
           <div key={"pricing"+index} className={`${(index === 1) ? "md:scale-110" : ""} border-secondary border-4 flex-1 flex flex-col p-10`}>
