@@ -1,3 +1,5 @@
+import { damianAfter, damianBefore, stachAfter, stachBefore } from "../assets"
+
 export const navLinks = [
     {
         id: "about",
@@ -20,7 +22,22 @@ export const navLinks = [
         href: ""
     }
 ]
-
+export const transforms = [
+    {
+        id: "damian",
+        name: "Damina",
+        age: "39",
+        img1: damianBefore,
+        img2: damianAfter
+    },
+    {
+        id: "stach",
+        name: "Stach",
+        age: "32",
+        img1: stachBefore,
+        img2: stachAfter
+    }
+]
 export const privacy = [
     {
         id: "politykaPrywatności",

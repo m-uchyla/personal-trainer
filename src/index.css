@@ -258,3 +258,10 @@ section{
   opacity: 1;
   color: #def9fa;
 }
+
+/* === Transforming === */
+
+.div-behind{
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+}

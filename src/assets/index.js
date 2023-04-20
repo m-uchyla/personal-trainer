@@ -7,6 +7,8 @@ import Weight from "./img/weight.png"
 import damianBefore from "./img/damianPrzed.png"
 import damianAfter from "./img/damianPo.png"
 import logo from "./img/logo.png"
+import stachBefore from "./img/stachBefore.png"
+import stachAfter from "./img/stachAfter.png"
 
 export{
     Favicon,
@@ -17,5 +19,7 @@ export{
     Weight,
     damianBefore,
     damianAfter,
-    logo
+    logo,
+    stachBefore,
+    stachAfter
 }
