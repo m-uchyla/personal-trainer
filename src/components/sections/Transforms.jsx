@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import ReactCardFlip from 'react-card-flip';
 import { transforms } from '../../constants';
+import { arrow } from '../../assets';
 
 const Transforms = () => {
 
@@ -24,8 +25,9 @@ const Transforms = () => {
     <section id='transforms' className='mt-20 md:mt-10 lg:mt-0 '>
         <h2 className='text-[48px] mb-10 text-center font-semibold text-white'>Oto Ci, którzy mi zaufali!</h2>
         <div className='flex justify-evenly'>
+          <img src={arrow} className='w-[100px] h-[100px] absolute left-[48vh] top-[165vh]'/>
           {transforms.map((transform, index) => (
-            <div className=''>
+            <div key={"transform"+index}>
               <h4 className='ml-5 mb-[-10px] text-[29px] text-white font-semibold'>{transform.name}, {transform.age}</h4>
               {/* 
               <h5 className={`text-end mr-8 mb-[-5px] text-[22px] text-white`}>{flipped[index] ? "AFTER" : "BEFORE"}</h5> 

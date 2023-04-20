@@ -9,6 +9,8 @@ import damianAfter from "./img/damianPo.png"
 import logo from "./img/logo.png"
 import stachBefore from "./img/stachBefore.png"
 import stachAfter from "./img/stachAfter.png"
+import arrow from "./img/arrow.png"
+import mostChosen from "./img/mostChosen.png"
 
 export{
     Favicon,
@@ -21,5 +23,7 @@ export{
     damianAfter,
     logo,
     stachBefore,
-    stachAfter
+    stachAfter,
+    arrow,
+    mostChosen
 }
