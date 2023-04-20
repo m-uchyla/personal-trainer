@@ -8,6 +8,7 @@ module.exports = {
         primary: "#ebc026", //yellow
         secondary: "#ededed", //white
         dark: "#232423", //gray
+        darker: '#1c1d1c'
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

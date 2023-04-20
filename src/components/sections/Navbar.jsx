@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Button from '../modules/Button'
 import { navLinks } from '../../constants'
-import { Favicon } from '../../assets'
+import { Favicon, logo } from '../../assets'
 import styles from '../../style'
 
 const Navbar = () => {
@@ -31,14 +31,12 @@ const Navbar = () => {
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <div className='flex justify-between items-center'>
-            <div className='flex justify-evenly items-center'>
-              <span className={`${!navbar ? "text-primary" : "text-dark"} font-bold sm:text-[18px] text-[13px]`}>Witeusz Uchyus</span>
-              <img src={Favicon} className={`${navbar ? "brightness-[20%]" : "brightness-100"} w-[40px]`} />
-              <span className={`${!navbar ? "text-primary" : "text-dark"} font-bold sm:text-[18px] text-[13px]`}>Personal Trainer</span>
-            </div>
+            <a href="/">
+              <img src={logo} className={`${navbar ? "brightness-[100%]" : "brightness-100"}`} />
+            </a>
             <ul className='list-none sm:flex hidden items-center justify-between'>
               {navLinks.map((link, index) => (
-                <li key={link.id} className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} ${!navbar ? "text-primary" : "text-dark"} cursor-pointer`}>{link.title}</li>
+                <li key={link.id} className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} ${!navbar ? "text-secondary" : "text-secondary"} hover:text-primary cursor-pointer`}>{link.title}</li>
               ))}
             </ul>
             <div className={`sm:hidden flex flex-1 justify-end items-center z-50`}>

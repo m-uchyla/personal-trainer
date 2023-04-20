@@ -39,18 +39,18 @@ export const privacy = [
 export const pricing = [
     {
         name: "Plan treningowy",
-        price: [9,99],
+        price: [149,99],
         per:"Jednorazowo",
-        desc: "Plan dostosowany do Twoich potrzeb",
+        desc: "Plan dostosowany do Twoich potrzeb i umiejętności",
         features:[
-            "Plan zaprojektowany indywidualnie",
+            "Indywidualny plan dla każdego klienta z osobna",
             "Wersje A i B do stosowania naprzemiennie",
-            "Wskazówki żywieniowe"
+            "Podstawowe wskazówki żywieniowe"
         ]
     },
     {
         name: "Trening w grupie",
-        price: [19,99],
+        price: [29,99],
         per:"Za godzinę treningu",
         desc: "Trening odbywa się w 4 osobowych grupach",
         features:[
@@ -61,7 +61,7 @@ export const pricing = [
     },
     {
         name: "Trening prywatny",
-        price: [29,99],
+        price: [79,99],
         per:"Za godzinę treningu",
         desc: "Trening, gdzie cały czas poświęcony jest tylko Tobie",
         features:[

@@ -6,6 +6,7 @@ import Dubmell from "./img/dumbell.png"
 import Weight from "./img/weight.png"
 import damianBefore from "./img/damianPrzed.png"
 import damianAfter from "./img/damianPo.png"
+import logo from "./img/logo.png"
 
 export{
     Favicon,
@@ -15,5 +16,6 @@ export{
     Dubmell,
     Weight,
     damianBefore,
-    damianAfter
+    damianAfter,
+    logo
 }
