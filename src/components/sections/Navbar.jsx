@@ -55,6 +55,10 @@ const Navbar = () => {
     document.getElementsByTagName("body")[0].style.overflow = "auto";
   }
 
+  window.addEventListener('resize', function() {
+    if(openCloseNav)setOpenCloseNav(false);
+  });
+  
   return (
     <nav className={`my-2 py-3 ${navbar ? "navbar-fixed active" : "navbar-absolute"} top-[-8px] left-0 w-full`}>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
