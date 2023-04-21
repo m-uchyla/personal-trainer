@@ -5,6 +5,16 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { mostChosen } from '../../assets';
 
 const Pricing = () => {
+
+  function selectOffer(offerName){
+    document.getElementById("subject").value = offerName;
+
+    const element = document.getElementById("contact");
+    const y = element.getBoundingClientRect().top + window.pageYOffset + (-75);
+
+    window.scrollTo({top: y, behavior: 'smooth'});
+  }
+
   return (
     <section id="pricing">
       <h2 className='text-secondary text-[48px] text-center font-bold'>Oferty</h2>
@@ -19,9 +29,11 @@ const Pricing = () => {
               <div className='mt-3.5 font-bold'>{offer.price[1]}</div>
               <div className='mt-6 ml-2 xl:text-[16px] text-[12px]'> / {offer.per}</div>
             </div>
-            <div className='w-[50%] mx-auto mb-6 mt-3'>
+
+            <div className='w-[50%] mx-auto mb-6 mt-3' onClick={()=>selectOffer(offer.name)}>
               <Button text={"Wybierz"} variation={(index === 1) ? 1 : 2} />
             </div>
+
             <div className='sm:mb-0 mb-10'>
             {offer.features.map((feature, index) => (
               <div key={"pricingFeature"+index} className='text-secondary my-2 flex'>

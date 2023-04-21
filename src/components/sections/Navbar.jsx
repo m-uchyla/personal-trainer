@@ -39,6 +39,12 @@ const Navbar = () => {
     });
   };
 
+  function smoothScroll(id){
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + (-75);
+
+    window.scrollTo({top: y, behavior: 'smooth'});
+  }
 
 
   window.addEventListener('scroll', changeBackground);
@@ -59,10 +65,10 @@ const Navbar = () => {
             </a>
             <ul className='list-none sm:flex hidden items-center justify-between'>
               {navLinks.map((link, index) => (
-                <a key={link.id} href={link.href}>
-                  <li id="navLink" className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} text-secondary ${(navActive == link.href.slice(1)) ? "text-red-500" : ""} ${link.href.slice(1)} hover:text-primary cursor-pointer`}>{link.title}</li>
+                <div key={link.id}>
+                  <li onClick={()=>smoothScroll(link.href.slice(1))} id="navLink" className={`${index === navLinks.length - 1 ? "mr-0" : "mr-3"} text-secondary ${(navActive == link.href.slice(1)) ? "text-red-500" : ""} ${link.href.slice(1)} hover:text-primary cursor-pointer`}>{link.title}</li>
                   {(navActive == link.href.slice(1)) ? <div className={`bg-primary -mb-[2px] h-[2px] ${index === navLinks.length - 1 ? "mr-0" : "mr-3"}`} /> : ""}
-                </a>
+                </div>
               ))}
             </ul>
             <div className={`sm:hidden flex flex-1 justify-end items-center z-50`}>
@@ -77,8 +83,8 @@ const Navbar = () => {
                     <ul className='list-none flex-col justify-end items-center flex-1 mt-7'>
                         {navLinks.map((link, index)=>(
                         <div key={link.id}>
-                          <li key={link.id} className={`font-poppins text-[24px] text-white font-normal cursor-pointer py-7`} onClick={()=>{handleClickScroll(link.id);setOpenCloseNav((prev) => !prev)}}>
-                              <a href={link.href} onClick={() => {setOpenCloseNav(false)}} >{link.title}</a>
+                          <li key={link.id} className={`font-poppins text-[24px] text-white font-normal cursor-pointer py-7`} onClick={()=>{}}>
+                              <div onClick={() => {smoothScroll(link.href.slice(1));setOpenCloseNav(false)}} >{link.title}</div>
                           </li>
                           {((index+1) == navLinks.length) ? "" : <div className='w-full h-[2px] bg-primary'/>}
                         </div>
