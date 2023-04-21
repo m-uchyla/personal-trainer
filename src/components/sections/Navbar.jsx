@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className={`${styles.boxWidth}`}>
           <div className='flex justify-between items-center'>
             <a href="/">
-              <img src={logo} className={`${navbar ? "brightness-[100%]" : "brightness-100"}`} />
+              <img src={logo} className={`${navbar ? "brightness-[100%]" : "brightness-100"} sm:w-[100%] w-[120px]`} />
             </a>
             <ul className='list-none sm:flex hidden items-center justify-between'>
               {navLinks.map((link, index) => (
@@ -83,7 +83,7 @@ const Navbar = () => {
                     <ul className='list-none flex-col justify-end items-center flex-1 mt-7'>
                         {navLinks.map((link, index)=>(
                         <div key={link.id}>
-                          <li key={link.id} className={`font-poppins text-[24px] text-white font-normal cursor-pointer py-7`} onClick={()=>{}}>
+                          <li key={link.id} className={`font-poppins sm:text-[24px] text-[20px] text-white font-normal cursor-pointer py-7`} onClick={()=>{}}>
                               <div onClick={() => {smoothScroll(link.href.slice(1));setOpenCloseNav(false)}} >{link.title}</div>
                           </li>
                           {((index+1) == navLinks.length) ? "" : <div className='w-full h-[2px] bg-primary'/>}

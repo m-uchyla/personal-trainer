@@ -22,10 +22,10 @@ const Transforms = () => {
   }
 
   return (
-    <section id='transforms' className='mt-20 md:mt-10 lg:mt-0 '>
-        <h2 className='text-[48px] mb-10 text-center font-semibold text-white'>Oto Ci, którzy mi zaufali!</h2>
-        <div className='flex justify-evenly'>
-          <img src={arrow} className='w-[100px] h-[100px] absolute left-[48vh] top-[165vh]'/>
+    <section id='transforms' className='md:mt-10 mt-5 lg:mt-0 '>
+        <h2 className='lg:text-[48px] ss:text-[40px] text-[36px] lg:mb-10 mb-5 text-center font-semibold text-white'>Oto Ci, którzy mi zaufali!</h2>
+        <div className='flex justify-evenly sm:flex-row flex-col items-center relative'>
+          <img src={arrow} className='w-[100px] h-[100px] absolute lg:left-[0] md:left-[120px] lg:top-[-10vh] md:top-[-10vh] top-[-85px] left-1'/>
           {transforms.map((transform, index) => (
             <div key={"transform"+index}>
               <h4 className='ml-5 mb-[-10px] text-[29px] text-white font-semibold'>{transform.name}, {transform.age}</h4>
@@ -35,10 +35,10 @@ const Transforms = () => {
               */}
               <div className='w-[250px] h-[2px] ml-5 mb-2 bg-primary'/>
               <ReactCardFlip isFlipped={flipped[index]} flipDirection="horizontal">
-                  <img src={transform.img1} className='w-[300px] h-[400px] div-behind cursor-pointer' onClick={() => handleClick(index)}/>
-                  <img src={transform.img2} className='w-[300px] h-[400px] div-behind cursor-pointer' onClick={() => handleClick(index)}/>
+                  <img src={transform.img1} className='w-[300px] h-[400px] div-behind cursor-pointer prevent-select' onClick={() => handleClick(index)}/>
+                  <img src={transform.img2} className='w-[300px] h-[400px] div-behind cursor-pointer prevent-select' onClick={() => handleClick(index)}/>
               </ReactCardFlip>
-              <div className='w-[250px] h-[2px] ml-5 mt-2 bg-primary'/>
+              <div className='w-[250px] h-[2px] md:mb-0 mb-10 ml-5 mt-2 bg-primary'/>
             </div>
           ))}
           
