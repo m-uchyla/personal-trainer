@@ -7,8 +7,8 @@ import Weight from "./img/weight.png"
 import damianBefore from "./img/damianPrzed.png"
 import damianAfter from "./img/damianPo.png"
 import logo from "./img/logo.png"
-import stachBefore from "./img/stachBefore.png"
-import stachAfter from "./img/stachAfter.png"
+import MariuszBefore from "./img/MariuszBefore.png"
+import MariuszAfter from "./img/MariuszAfter.png"
 import arrow from "./img/arrow.png"
 import mostChosen from "./img/mostChosen.png"
 import WM from "./img/WMlogo_lettersOnly.png"
@@ -23,8 +23,8 @@ export{
     damianBefore,
     damianAfter,
     logo,
-    stachBefore,
-    stachAfter,
+    MariuszBefore,
+    MariuszAfter,
     arrow,
     mostChosen,
     WM

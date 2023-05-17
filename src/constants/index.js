@@ -1,4 +1,4 @@
-import { damianAfter, damianBefore, stachAfter, stachBefore } from "../assets"
+import { damianAfter, damianBefore, MariuszAfter, MariuszBefore } from "../assets"
 
 export const navLinks = [
     {
@@ -11,6 +11,7 @@ export const navLinks = [
         title: "Przemiany Klientów",
         href: "#transforms"
     },
+    
     {
         id: "offer",
         title: "Oferta",
@@ -25,17 +26,17 @@ export const navLinks = [
 export const transforms = [
     {
         id: "damian",
-        name: "Damina",
+        name: "Damian",
         age: "39",
         img1: damianBefore,
         img2: damianAfter
     },
     {
-        id: "stach",
-        name: "Stach",
+        id: "mariusz",
+        name: "Mariusz",
         age: "32",
-        img1: stachBefore,
-        img2: stachAfter
+        img1: MariuszBefore,
+        img2: MariuszAfter
     }
 ]
 export const privacy = [

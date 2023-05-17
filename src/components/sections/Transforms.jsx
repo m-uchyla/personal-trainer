@@ -25,7 +25,7 @@ const Transforms = () => {
     <section id='transforms' className='md:mt-10 mt-5 lg:mt-0 '>
         <h2 className='lg:text-[48px] ss:text-[40px] text-[36px] lg:mb-10 mb-5 text-center font-semibold text-white'>Oto Ci, którzy mi zaufali!</h2>
         <div className='flex justify-evenly sm:flex-row flex-col items-center relative'>
-          <img src={arrow} className='w-[100px] h-[100px] absolute lg:left-[270px] md:left-[120px] lg:top-[-13vh] md:top-[-10vh] top-[-85px] left-1'/>
+          <img src={arrow} className='w-[100px] h-[100px] absolute lg:left-[270px] md:left-[120px] lg:top-[-13vh] md:top-[-12vh] top-[-85px] left-1'/>
           {transforms.map((transform, index) => (
             <div key={"transform"+index}>
               <h4 className='ml-5 mb-[-10px] text-[29px] text-white font-semibold'>{transform.name}, {transform.age}</h4>
