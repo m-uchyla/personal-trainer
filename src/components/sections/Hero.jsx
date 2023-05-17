@@ -16,7 +16,7 @@ const Hero = () => {
               </div>
           </div>
           <div className='flex'>
-              <img src={Bodybuilder} className='prevent-select sm:w-[100%] sm:h-[100%] w-[300px] h-[400px]  sm:relative absolute z-[1] -top-[-80px] sm:top-6 sm:-right-12 ss:-right-[130px] -right-32' />
+              <img src={Bodybuilder} className='prevent-select sm:w-[100%] sm:h-[100%] w-[300px] h-[400px]  sm:relative absolute z-[1] -top-[-80px] sm:top-6 sm:-right-0 ss:-right-[130px] -right-32' />
           </div>
         </div>
         <div className='sm:w-[225px] w-[140px] sm:mx-auto block ss:hidden'>
